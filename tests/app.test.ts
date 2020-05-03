@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { app } from '../src/app';
 
-describe("routes/healthcheck", () => {
+describe("test healthcheck", () => {
   it("should pong", async () => {
     const response = await request(app.callback()).get("/healthz");
     expect(response.status).toEqual(200);
