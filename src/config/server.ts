@@ -4,9 +4,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const envSchema = Joi.object({
-    NODE_ENV: Joi.string().valid('development', 'production', 'test'),
-    PORT: Joi.number(),
-  })
+  NODE_ENV: Joi.string().valid('development', 'production', 'test'),
+  PORT: Joi.number(),
+})
   .unknown()
   .required();
 
